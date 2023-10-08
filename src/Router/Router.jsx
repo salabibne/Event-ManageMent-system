@@ -8,6 +8,7 @@ import ServiceDetails from "../Componnets/Service/ServiceDetails";
 import Login from "../Componnets/Authentications/Login";
 import Register from "../Componnets/Authentications/Register";
 import PrivateRoutes from "./PrivateRoutes";
+import Contact from "../Componnets/Contact/Contact";
 
 
 
@@ -25,11 +26,11 @@ import PrivateRoutes from "./PrivateRoutes";
                     },
                     {
                         path:"/achivements",
-                        element:<Achivements></Achivements>,
+                        element:<PrivateRoutes><Achivements></Achivements></PrivateRoutes>,
                     },
                    {
                     path:"/about",
-                    element:<About></About>,
+                    element:<PrivateRoutes><About></About></PrivateRoutes>,
 
                    },
                    {
@@ -45,6 +46,10 @@ import PrivateRoutes from "./PrivateRoutes";
                     path:"/register",
                     element:<Register></Register>
                    },
+                   {
+                    path:"/contact",
+                    element:<Contact></Contact>,
+                   }
                 ]
                 
             }

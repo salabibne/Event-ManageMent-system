@@ -12,9 +12,12 @@ const Navbar = () => {
     }
     const navlinks = <>
         <li ><NavLink to="/">Home</NavLink></li>
+       
         
         <li><NavLink to="/about">About</NavLink></li>
         <li><NavLink to="/achivements">Achivements</NavLink></li>
+        <li><NavLink to="/contact">Contact us </NavLink></li>
+        
     </>
     return (
         <div className="navbar bg-base-100 p-6">
@@ -36,7 +39,7 @@ const Navbar = () => {
             </div>
             <div className="navbar-end">
                 {
-                    user ? <p className="font-bold">{ user.email.split('@')[0]}<span>{user.photoURL ? <img src={user.photoURL}></img>:<AiOutlineUser></AiOutlineUser>}</span></p> : ""
+                    user ? <p className="font-bold text-2xl">{ user.email.split('@')[0]}<span>{user.photoURL ? <img className="rounded-full" src={user.photoURL}></img>:<AiOutlineUser></AiOutlineUser>}</span></p> : ""
                 }
             </div>
             <div className="navbar-end">
