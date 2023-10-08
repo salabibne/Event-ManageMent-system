@@ -5,6 +5,7 @@ import Navbar from "../Navbar/Navbar";
 import Service from "../Service/Service";
 import { useEffect } from "react";
 import Testinomials from "../Testinomials/Testinomials";
+import Gallary from "../Gallary/Gallary";
 
 
 const Home = () => {
@@ -23,6 +24,9 @@ const services =useLoaderData()
             </div>
             <h1 className="text-center p-4 text-3xl border-b-4 border-[#008080] font-semibold text-zinc-800 mt-6">What Clients Say !</h1>
             <Testinomials></Testinomials>
+
+            <h1 className="text-center p-4 text-3xl border-b-4 border-[#008080] font-semibold text-zinc-800 mt-6">Gallary </h1>
+            <Gallary></Gallary>
 
             <Footer></Footer>
         </div>
