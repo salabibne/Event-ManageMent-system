@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { context_codeSal } from "../../Providers/Context";
+import { AiOutlineUser } from "react-icons/ai";
 
 
 const Navbar = () => {
@@ -11,7 +12,7 @@ const Navbar = () => {
     }
     const navlinks = <>
         <li ><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/service">Services</NavLink></li>
+        
         <li><NavLink to="/about">About</NavLink></li>
         <li><NavLink to="/achivements">Achivements</NavLink></li>
     </>
@@ -32,6 +33,11 @@ const Navbar = () => {
                 <ul className="menu menu-horizontal px-1">
                     {navlinks}
                 </ul>
+            </div>
+            <div className="navbar-end">
+                {
+                    user ? <p className="font-bold">{ user.email.split('@')[0]}<span>{user.photoURL ? <img src={user.photoURL}></img>:<AiOutlineUser></AiOutlineUser>}</span></p> : ""
+                }
             </div>
             <div className="navbar-end">
                 {

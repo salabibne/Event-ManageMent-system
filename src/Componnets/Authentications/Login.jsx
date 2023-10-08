@@ -36,7 +36,7 @@ const Login = () => {
 
                 toast.success('Login Successful;', {
                     position: "top-center",
-                    autoClose: 5000,
+                    autoClose: 3000,
                     hideProgressBar: false,
                     closeOnClick: true,
                     pauseOnHover: true,
@@ -46,9 +46,10 @@ const Login = () => {
                 });
 
                 
+
                 setTimeout(() => {
                     navigate(location?.state ? location.state : '/');
-                }, 3000); // Adjust the delay time as needed
+                }, 3000); 
             })
 
             .catch(error => {
@@ -67,9 +68,24 @@ const Login = () => {
 
 
                 const user = result.user
+                toast.success('Login Successful;', {
+                    position: "top-center",
+                    autoClose: 3000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                });
+
+                setTimeout(() => {
+                    navigate(location?.state ? location.state : '/');
+                }, 3000); 
 
                 console.log("guser", user)
-                navigate(location?.state ? location.state :'/')
+                
+                
             })
             .catch(error => {
                 console.log(error)
