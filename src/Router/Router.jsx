@@ -5,6 +5,8 @@ import Home from "../Componnets/Home/Home";
 import Achivements from "../Componnets/Achivements/Achivements";
 import About from "../Componnets/About/About";
 import ServiceDetails from "../Componnets/Service/ServiceDetails";
+import Login from "../Componnets/Authentications/Login";
+import Register from "../Componnets/Authentications/Register";
 
 
 
@@ -33,7 +35,15 @@ import ServiceDetails from "../Componnets/Service/ServiceDetails";
                     path:"/details/:id",
                     element:<ServiceDetails></ServiceDetails>,
                    
-                   }
+                   },
+                   {
+                    path:"/login",
+                    element:<Login></Login>,
+                   },
+                   {
+                    path:"/register",
+                    element:<Register></Register>
+                   },
                 ]
                 
             }
