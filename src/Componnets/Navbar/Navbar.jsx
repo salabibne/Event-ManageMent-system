@@ -39,7 +39,7 @@ const Navbar = () => {
             </div>
             <div className="navbar-end">
                 {
-                    user ? <p className="font-bold text-2xl">{ user.email.split('@')[0]}<span>{user.photoURL ? <img className="rounded-full" src={user.photoURL}></img>:<AiOutlineUser></AiOutlineUser>}</span></p> : ""
+                    user ? <p className="font-bold text-xl">{ user.email.split('@')[0]}<span>{user.photoURL ? <img width={50} className="rounded-full" src={user.photoURL}></img>:<AiOutlineUser></AiOutlineUser>}</span></p> : ""
                 }
             </div>
             <div className="navbar-end">

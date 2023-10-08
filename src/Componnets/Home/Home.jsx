@@ -4,6 +4,7 @@ import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
 import Service from "../Service/Service";
 import { useEffect } from "react";
+import Testinomials from "../Testinomials/Testinomials";
 
 
 const Home = () => {
@@ -20,6 +21,8 @@ const services =useLoaderData()
                     services.map(service => <Service key={service.id} service={service}></Service>)
                 }
             </div>
+            <h1 className="text-center p-4 text-3xl border-b-4 border-[#008080] font-semibold text-zinc-800 mt-6">What Clients Say !</h1>
+            <Testinomials></Testinomials>
 
             <Footer></Footer>
         </div>
