@@ -1,12 +1,19 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { context_codeSal } from "../../Providers/Context";
 
 
 const Navbar = () => {
+    const { user, Logout } = useContext(context_codeSal)
+    const LoggingOut = () => {
+       return Logout()
+            
+    }
     const navlinks = <>
-     <li ><NavLink  to ="/">Home</NavLink></li>
-     <li><NavLink to ="/service">Services</NavLink></li>
-     <li><NavLink to ="/about">About</NavLink></li>
-     <li><NavLink to ="/achivements">Achivements</NavLink></li>
+        <li ><NavLink to="/">Home</NavLink></li>
+        <li><NavLink to="/service">Services</NavLink></li>
+        <li><NavLink to="/about">About</NavLink></li>
+        <li><NavLink to="/achivements">Achivements</NavLink></li>
     </>
     return (
         <div className="navbar bg-base-100 p-6">
@@ -27,9 +34,12 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-               <Link to ="/login"><button className="p-4 bg-[#008080] text-white  font-bold rounded-lg">Login</button></Link>
+                {
+                    user ? <button onClick={LoggingOut} className="p-4 bg-[#008080] text-white  font-bold rounded-lg">Logout</button> : <Link to="/login"><button className="p-4 bg-[#008080] text-white  font-bold rounded-lg">Login</button></Link>
+                }
+
             </div>
-        </div> 
+        </div>
     );
 };
 

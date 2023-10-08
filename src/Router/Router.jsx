@@ -7,6 +7,7 @@ import About from "../Componnets/About/About";
 import ServiceDetails from "../Componnets/Service/ServiceDetails";
 import Login from "../Componnets/Authentications/Login";
 import Register from "../Componnets/Authentications/Register";
+import PrivateRoutes from "./PrivateRoutes";
 
 
 
@@ -33,7 +34,7 @@ import Register from "../Componnets/Authentications/Register";
                    },
                    {
                     path:"/details/:id",
-                    element:<ServiceDetails></ServiceDetails>,
+                    element:<PrivateRoutes><ServiceDetails></ServiceDetails></PrivateRoutes>
                    
                    },
                    {

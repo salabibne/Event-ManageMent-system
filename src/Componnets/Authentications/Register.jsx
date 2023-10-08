@@ -1,20 +1,25 @@
-import {  useState } from "react";
+import {  useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { context_codeSal } from "../../Providers/Context";
 
 const Register = () => {
     const capital =/[A-Z]/;
     const special_character=/[@#$%^&+=!(){}[\]<>?|]/;
     const [error,setError]=useState('')
     const [showpassword,setshowpassword]=useState(false)
-    
+    const {createUser}=useContext(context_codeSal)
     const handleRegister = e =>{
         setError('')
         e.preventDefault()
+       
+      
         const name = e.target.name.value
         const email = e.target.email.value
         const password = e.target.password.value
+       
+        
         console.log(name,email,password)
 
         // check error of userInputs
@@ -31,8 +36,32 @@ const Register = () => {
             setError("use special character (@#$%^&*~!) in your password")
             return
         }
-        
 
+        createUser(email,password)
+       .then(userCredintial =>{
+        const user = userCredintial.user
+        console.log(user)
+        toast.success('Registration Successful;', {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            });
+       })
+       
+       
+       .catch(error =>{
+        console.error(error)
+        
+       })
+
+       
+        
+       
 
     }
    
