@@ -5,6 +5,8 @@ This template provides a minimal setup to get React working in Vite with HMR and
 Currently, two official plugins are available:
 
 project name : codesal
+
+
 live link : https://codesal.web.app/?fbclid=IwAR3VMmOSSlMczv9XKCoG5kV5mZkVO3LDFHlPfrwmqEF_gDfFOuvuW-vbOI8
 
 project features:
@@ -14,4 +16,4 @@ project features:
 4. for login page , if users do any mistake , an error message will be displayed .
 5. for successful , login and registration, user get a  success toast.
 6. web site has aanimation. 
-7.
+
