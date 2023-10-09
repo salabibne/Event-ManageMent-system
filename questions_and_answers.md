@@ -18,7 +18,7 @@ console.log(greetign);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: A : {}
+ Answer: A : {}
 
 <i>declare varibale name is greetign and it assigns a empty object. and also console.log it. so it gives a empty string.</i>
 
@@ -43,7 +43,7 @@ sum(1, "2");
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: C: `"12"`
+ Answer: C: `"12"`
 
 <i>in sum function a is a number and b is  a string. as there is + oparator here , js whole outputs treats as  a string.</i>
 
@@ -69,7 +69,7 @@ console.log(food);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: A: `['🍕', '🍫', '🥑', '🍔']` 
+Answer: A: `['🍕', '🍫', '🥑', '🍔']` 
 
 <i>here, for updating the info food, it does not effect the food array because there is a separte property. so food array remains unchanged.</i>
 
@@ -94,7 +94,7 @@ console.log(sayHi());
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: B: `Hi there, undefined` 
+ Answer: B: `Hi there, undefined` 
 
 <i>because say hi function not passed any value, so it returns undefined.</i>
 
@@ -122,7 +122,7 @@ console.log(count);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: C: 3 
+ Answer: C: 3 
 
 <i>because if num is a truthy value, count will be increased by 1 . here 1,2,3 are truthy value excepts 0 in nums array. for the 3 truthy values, count will be increased 1 so , count = 3</i>
 
